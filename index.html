@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incollaboractive - Jasa Konsultan Profesional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Google Fonts - Poppins & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            color: #d1d5db;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Efek header transparan dan berubah warna saat di-scroll */
+        .navbar-scrolled {
+            background-color: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 4px 6px -1px rgb(255 255 255 / 0.1), 0 2px 4px -2px rgb(255 255 255 / 0.1);
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            z-index: 1000;
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300">
+
+    <!-- Header & Navigation -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-colors duration-300">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo/Name -->
+            <a href="#" class="text-2xl font-bold text-white">incollaboractive</a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#ec008c]">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#services" class="text-white hover:text-[#ec008c] font-medium transition-colors duration-300">Layanan</a>
+                <a href="#about" class="text-white hover:text-[#ec008c] font-medium transition-colors duration-300">Tentang Kami</a>
+                <a href="#partners" class="text-white hover:text-[#ec008c] font-medium transition-colors duration-300">Partner</a>
+                <a href="#contact" class="text-white bg-[#ec008c] hover:bg-[#c20070] px-6 py-2 rounded-xl font-medium transition-colors duration-300">Hubungi Kami</a>
+            </div>
+        </nav>
+        <!-- Mobile Navigation Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 shadow-lg py-4">
+            <a href="#services" class="block text-white hover:text-[#ec008c] px-4 py-2">Layanan</a>
+            <a href="#about" class="block text-white hover:text-[#ec008c] px-4 py-2">Tentang Kami</a>
+            <a href="#partners" class="block text-white hover:text-[#ec008c] px-4 py-2">Partner</a>
+            <a href="#contact" class="block text-white bg-[#ec008c] hover:bg-[#c20070] px-4 py-2 mt-2 rounded-xl font-medium text-center mx-4">Hubungi Kami</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen bg-black text-white flex items-center justify-center">
+            
+			<div class="container mx-auto px-4 text-center">
+				<center><img width="220px;" src="img/logo_in_pink-01-01.png"></center>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+                    <span >ONLINE</span>
+                    <br>
+                    <span class="text-[#ec008c]">ME</span><span>DIA</span>
+                </h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-gray-400">
+                    Mewujudkan Ide Anda Menjadi Solusi Digital
+                </p>
+                <a href="#contact" class="bg-[#ec008c] hover:bg-[#c20070] text-white font-bold py-3 px-8 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105">Mulai Kolaborasi Sekarang</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 md:py-24 bg-gray-900">
+            <div class="container mx-auto px-4 text-center max-w-4xl">
+                <span class="text-[#ec008c] font-semibold uppercase tracking-widest">Tentang Kami</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-6 text-white">Kami Siap Jadi Partner Digital Anda</h2>
+                <p class="text-lg text-gray-400 leading-relaxed">Incollaboractive adalah tim konsultan digital yang lahir dari semangat kolaborasi dan inovasi. Kami percaya bahwa setiap ide memiliki potensi besar, dan tugas kami adalah membantu Anda mewujudkannya menjadi solusi nyata di dunia digital.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 md:py-24 bg-black">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <span class="text-[#ec008c] font-semibold uppercase tracking-widest">Layanan Kami</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mt-2 text-white">Apa yang Kami Tawarkan?</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service 1: Digital Marketing -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl">
+                        <div class="text-[#ec008c] mb-4 text-center">
+                            <i class="bi bi-graph-up-arrow text-5xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-center mb-2 text-white">Digital Marketing</h3>
+                        <p class="text-gray-400 text-center">Meningkatkan visibilitas dan jangkauan bisnis Anda melalui strategi digital yang efektif dan terukur.</p>
+                    </div>
+                    <!-- Service 2: App & Web Developer -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl">
+                        <div class="text-[#ec008c] mb-4 text-center">
+                            <i class="bi bi-code-slash text-5xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-center mb-2 text-white">App & Web Developer</h3>
+                        <p class="text-gray-400 text-center">Membangun aplikasi mobile dan website yang modern, responsif, dan fungsional untuk kebutuhan bisnis Anda.</p>
+                    </div>
+                    <!-- Service 3: System Developer -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl">
+                        <div class="text-[#ec008c] mb-4 text-center">
+                            <i class="bi bi-gear-wide-connected text-5xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-center mb-2 text-white">System Developer</h3>
+                        <p class="text-gray-400 text-center">Mengembangkan sistem informasi yang efisien untuk mengelola operasional bisnis Anda dengan lebih baik.</p>
+                    </div>
+                    <!-- Service 4: Creative Media -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl">
+                        <div class="text-[#ec008c] mb-4 text-center">
+                            <i class="bi bi-camera-reels text-5xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-center mb-2 text-white">Creative Media</h3>
+                        <p class="text-gray-400 text-center">Menciptakan konten visual dan multimedia yang menarik untuk membangun identitas brand yang kuat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Partners Section (Slider) -->
+        <section id="partners" class="py-20 md:py-24 bg-gray-900">
+            <div class="container mx-auto px-4 text-center">
+                <span class="text-[#ec008c] font-semibold uppercase tracking-widest">Partner Kami</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-12 text-white">Mereka yang Percaya pada Kami</h2>
+                <div class="slider-container relative max-w-6xl mx-auto">
+                    <!-- Previous Button -->
+                    <button id="prev-btn" class="absolute left-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-gray-800 shadow-lg z-10 hidden md:block transition-all duration-300 hover:bg-[#ec008c] hover:scale-110">
+                        <svg class="w-6 h-6 text-gray-400 hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <!-- Next Button -->
+                    <button id="next-btn" class="absolute right-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-gray-800 shadow-lg z-10 hidden md:block transition-all duration-300 hover:bg-[#ec008c] hover:scale-110">
+                        <svg class="w-6 h-6 text-gray-400 hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                    <!-- Slider Track -->
+                    <div class="overflow-hidden">
+                        <div id="slider-track" class="flex items-stretch py-4">
+                            <!-- Partner 1: Malang Creative Fusion -->
+                            <div class="partner-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <a href="https://mcf.or.id/" target="_blank" class="block bg-gray-800 p-8 rounded-2xl shadow-md h-full flex items-center justify-center transition-all duration-300 hover:bg-gray-700">
+                                    <p class="text-xl font-semibold text-gray-300">Malang Creative Fusion</p>
+                                </a>
+                            </div>
+                            <!-- Partner 2: Lembah Kelud -->
+                            <div class="partner-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <a href="https://lembahkelud.com/" target="_blank" class="block bg-gray-800 p-8 rounded-2xl shadow-md h-full flex items-center justify-center transition-all duration-300 hover:bg-gray-700">
+                                    <img width="110px;" src="img/patner/lklogo.png" alt="Logo Lembah Kelud" class="logo-img">
+                                </a>
+                            </div>
+                            <!-- Partner 3: Vandermanlandcamp -->
+                            <div class="partner-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <a href="https://vandermanlandcamp.com/" target="_blank" class="block bg-gray-800 p-8 rounded-2xl shadow-md h-full flex items-center justify-center transition-all duration-300 hover:bg-gray-700">
+                                    <img width="150px;" src="img/patner/vlclogo2.png" alt="Logo Vandermanland Camp" class="logo-img">
+                                </a>
+                            </div>
+                            <!-- Partner 4: Dimetrix -->
+                            <div class="partner-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <a href="https://dimetrix.id/" target="_blank" class="block bg-gray-800 p-8 rounded-2xl shadow-md h-full flex items-center justify-center transition-all duration-300 hover:bg-gray-700">
+                                    <p class="text-xl font-semibold text-gray-300">Dimetrix</p>
+                                </a>
+                            </div>
+                            <!-- Partner 5: Towing Makota 86 -->
+                            <div class="partner-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <a href="https://towingmakota86.com/" target="_blank" class="block bg-gray-800 p-8 rounded-2xl shadow-md h-full flex items-center justify-center transition-all duration-300 hover:bg-gray-700">
+                                    <p class="text-xl font-semibold text-gray-300">Towing Makota 86</p>
+                                </a>
+                            </div>
+                            <!-- Partner 6: X60 Jaran -->
+                            <div class="partner-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <div class="block bg-gray-800 p-8 rounded-2xl shadow-md h-full flex items-center justify-center">
+                                    <p class="text-xl font-semibold text-gray-300">X60 Jaran</p>
+                                </div>
+                            </div>
+                            <!-- Partner 7: Agro Mandiri -->
+                            <div class="partner-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <a href="https://agromandiri.id/" target="_blank" class="block bg-gray-800 p-8 rounded-2xl shadow-md h-full flex items-center justify-center transition-all duration-300 hover:bg-gray-700">
+                                    <p class="text-xl font-semibold text-gray-300">Agro Mandiri</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+        <!-- CTA Section -->
+        <section class="bg-[#ec008c] text-white py-20 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Siap untuk Mulai Berkolaborasi?</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto">Kami siap membantu Anda membangun solusi digital yang luar biasa. Hubungi kami sekarang untuk mendiskusikan proyek Anda.</p>
+                <a href="#contact" class="bg-white text-[#ec008c] font-bold py-3 px-8 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-gray-100">Hubungi Kami</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-24 bg-black">
+            <div class="container mx-auto px-4 text-center">
+                <span class="text-[#ec008c] font-semibold uppercase tracking-widest">Hubungi Kami</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-6 text-white">Mari Kita Terhubung</h2>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                    <!-- Contact Card 1 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-lg w-full md:w-1/3 transition-all duration-300 hover:shadow-xl">
+                        <div class="text-center">
+                            <h3 class="text-xl font-semibold mb-2 text-white">Hedy Yudianto</h3>
+                            <a href="https://wa.me/6285730112334" target="_blank" class="text-[#ec008c] hover:text-[#c20070] transition-colors duration-300 text-lg font-medium">+62 857 3011 2334</a>
+                        </div>
+                    </div>
+                    <!-- Contact Card 2 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-lg w-full md:w-1/3 transition-all duration-300 hover:shadow-xl">
+                        <div class="text-center">
+                            <h3 class="text-xl font-semibold mb-2 text-white">Wahyu Artadianto</h3>
+                            <a href="https://wa.me/618123354179" target="_blank" class="text-[#ec008c] hover:text-[#c20070] transition-colors duration-300 text-lg font-medium">+62 812 3354 179</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Instagram Link -->
+                <div class="mt-8">
+                    <p class="text-lg text-gray-400 mb-2">Atau kunjungi Instagram kami:</p>
+                    <a href="https://www.instagram.com/incollaboractive/" target="_blank" class="text-[#ec008c] hover:text-[#c20070] transition-colors duration-300 text-lg font-medium">@incollaboractive</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-400 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-white">incollaboractive</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/incollaboractive/" target="_blank" class="text-gray-400 hover:text-[#ec008c] transition-colors duration-300">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.071 1.17.06 1.805.249 2.417.464 1.137.417 1.956 1.236 2.373 2.373.215.612.404 1.247.464 2.417.059 1.265.071 1.645.071 4.85s-.012 3.584-.071 4.85c-.06 1.17-.249 1.805-.464 2.417-1.137 1.137-1.956 1.956-2.373 2.373-.612.215-1.247.404-2.417.464-1.265.059-1.645.071-4.85.071s-3.584-.012-4.85-.071c-1.17-.06-1.805-.249-2.417-.464-1.137-1.137-1.956-1.956-2.373-2.373-.215-.612-.404-1.247-.464-2.417-.059-1.265-.071-1.645-.071-4.85s.012-3.584.071-4.85c.06-1.17.249-1.805.464-2.417 1.137-1.137 1.956-1.956 2.373-2.373.612-.215 1.247-.404 2.417-.464 1.265-.059 1.645-.071 4.85-.071zm0-2.163c-3.259 0-3.66.012-4.947.071-1.396.06-2.327.31-3.114.61-1.17.452-2.146 1.187-2.932 1.972-.786.786-1.521 1.762-1.972 2.932-.3.787-.55 1.718-.61 3.114-.059 1.287-.071 1.688-.071 4.947s.012 3.66.071 4.947c.06 1.396.31 2.327.61 3.114.452 1.17 1.187 2.146 1.972 2.932.786.786 1.762 1.521 2.932 1.972.787.3 1.718.55 3.114.61 1.287.059 1.688.071 4.947.071s3.66-.012 4.947-.071c1.396-.06 2.327-.31 3.114-.61 1.17-.452 2.146-1.187 2.932-1.972.786-.786 1.521-1.762 1.972-2.932.3-.787.55-1.718.61-3.114.059-1.287.071-1.688.071-4.947s-.012-3.66-.071-4.947c-.06-1.396-.31-2.327-.61-3.114-.452-1.17-1.187-2.146-1.972-2.932-.786-.786-1.762-1.521-2.932-1.972-.787-.3-1.718-.55-3.114-.61-1.287-.059-1.688-.071-4.947-.071zM12 9.076c-1.616 0-2.924 1.308-2.924 2.924s1.308 2.924 2.924 2.924 2.924-1.308 2.924-2.924-1.308-2.924-2.924-2.924zm0 4.793c-1.033 0-1.869-.836-1.869-1.869s.836-1.869 1.869-1.869 1.869.836 1.869 1.869-.836 1.869-1.869 1.869zm5.952-5.462a1.071 1.071 0 01-1.071 1.071 1.071 1.071 0 01-1.071-1.071c0-.59.48-1.071 1.071-1.071s1.071.48 1.071 1.071z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 mt-4">&copy; 2024 Incollaboractive. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a id="back-to-top" href="#" class="back-to-top bg-[#ec008c] hover:bg-[#c20070] text-white p-3 rounded-full shadow-lg">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </a>
+
+    <!-- JavaScript untuk toggle menu mobile, slider, dan back to top -->
+    <script>
+        // Toggle menu mobile
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Efek header saat scroll
+        const mainHeader = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                mainHeader.classList.add('navbar-scrolled');
+            } else {
+                mainHeader.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Partner Slider
+        const sliderTrack = document.getElementById('slider-track');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const partnerItems = document.querySelectorAll('.partner-item');
+        const totalPartners = partnerItems.length;
+
+        let currentIndex = 0;
+        let visibleItems = 3;
+
+        function updateVisibleItems() {
+            if (window.innerWidth < 768) {
+                visibleItems = 1; // Mobile
+            } else if (window.innerWidth < 1024) {
+                visibleItems = 2; // Tablet
+            } else {
+                visibleItems = 3; // Desktop
+            }
+        }
+        
+        function updateSlider() {
+            const itemWidth = sliderTrack.offsetWidth / visibleItems;
+            const newTransformValue = -currentIndex * itemWidth;
+            sliderTrack.style.transform = `translateX(${newTransformValue}px)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalPartners;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalPartners) % totalPartners;
+            updateSlider();
+        }
+        
+        // Initial setup
+        updateVisibleItems();
+        updateSlider();
+
+        // Event listeners
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            updateVisibleItems();
+            updateSlider();
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Tampilkan tombol setelah 300px
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
